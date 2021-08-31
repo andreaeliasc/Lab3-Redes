@@ -37,7 +37,7 @@ Puedes instalarlas usando el siguiente comando:
 ```sh
 pip install -r requirements.txt 
 ```
-En caso de que `aioconsole` no se haya instalado por no hallar una versión adecuada o algún error, prueba usando el siguiente comando:
+En caso de que `aioconsole` no se haya instalado por no encontrar una versión adecuada o algún error, prueba usando el siguiente comando:
 ```
 pip install --upgrade setuptools
 ```
