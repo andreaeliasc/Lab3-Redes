@@ -5,9 +5,9 @@
 - Comprender cómo funcionan las tablas de enrutamiento.
 
 ## Algoritmos implementados
--[x] Flooding
--[x] Distance Vector Routing
--[x] Link State Routing
+- [x] Flooding
+- [x] Distance Vector Routing
+- [x] Link State Routing
 
 ## Requerimientos
 Las herramientas usadas para el desarrollo y uso del programa fueron:
