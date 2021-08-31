@@ -1,6 +1,10 @@
 from getpass import getpass
 from Client import *
 
+"""
+    Main class
+"""
+
 if __name__ == '__main__':
 
     jid = input("Type your jid: ")

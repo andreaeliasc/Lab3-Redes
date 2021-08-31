@@ -5,6 +5,19 @@ from utils import calculate
 from slixmpp.exceptions import IqError, IqTimeout
 
 class Client(slixmpp.ClientXMPP):
+    """
+        This class allows users to chat with other users and login
+
+        Arguments:
+            jid -- the jid of the user using the following format:[name]@alumchat.xyz
+            passowrd -- the password associated to the said user
+            recipient --the jid of the recipient using the following format: [name]@alumchat.xyz
+            message -- the message to send
+            routing -- the type of routing to use
+            listening -- a boolean that indicates if the user is sending a message or just listening
+            names_file -- the filename of the file with the name-node associations
+            topology_file -- the filename of the file with the node-node associations
+    """
     def __init__(self, jid, password, recipient, message, routing, listening, names_file, topology_file):
         slixmpp.ClientXMPP.__init__(self, jid, password)
 
@@ -21,6 +34,13 @@ class Client(slixmpp.ClientXMPP):
         self.add_event_handler("message", self.message)
         self.add_event_handler("register", self.register)
 
+
+    """
+        Send presence and calculate the route based on the given parameters
+
+        Arguments:
+            event -- an empty dictionary
+    """
     async def start(self, event):
         self.send_presence()
         await self.get_roster()
@@ -41,7 +61,13 @@ class Client(slixmpp.ClientXMPP):
             for receiver in receivers:
                 print("Message sent to :",receiver)
                 self.send_message(mto=receiver, mbody=message, mtype='chat')
+    
+    """
+        Sign in with a given user
 
+        Arguments:
+            iq -- an empty dictionary
+    """
     def register(self, iq):
         iq = self.Iq()
         iq['type'] = 'set'
@@ -61,6 +87,12 @@ class Client(slixmpp.ClientXMPP):
             print(e)
             self.disconnect()
 
+    """
+        Print the route of the message and send it to each receiver
+
+        Arguments:
+            msg -- the message to send
+    """
     def message(self, msg):
         if(self.routing=="flooding"):
             if msg['type'] in ('chat'):
