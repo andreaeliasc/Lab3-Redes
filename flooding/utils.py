@@ -53,7 +53,7 @@ def get_neighbors(topology_file, names_file, JID):
 	file = open(topology_file, "r")
 	file = file.read()
 	info = eval(file)
-	if(info["type"]=="topology"):
+	if(info["type"]=="topo"):
 		names = info["config"]
 		neighbors_IDs = names[ID]
 		neighbors_JIDs = [get_JID(names_file,i) for i in neighbors_IDs]
