@@ -1,0 +1,1 @@
+{"type":"names", "config":{'A': 'urb18473@alumchat.xyz', 'B': 'urb18473_1@alumchat.xyz', 'C': 'urb18473_2@alumchat.xyz', 'D': 'urb18473_3@alumchat.xyz', 'E': 'urb18473_4@alumchat.xyz', 'F': 'urb18473_5@alumchat.xyz', 'G': 'urb18473_6@alumchat.xyz', 'H': 'urb18473_7@alumchat.xyz', 'I': 'urb18473_8@alumchat.xyz'} }
