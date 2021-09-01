@@ -50,6 +50,7 @@ pip install aioconsole
 ```sh
 python main.py
 ```
+Cuando solicite el archivo de nombres, ingresar `names.txt`, y para el nombre del archivo con la topología, colocar `topology.txt`
 ## Autores
 Andrea Elías https://github.com/andreaeliasc
 Diego Estrada https://github.com/diegoestradaXO
