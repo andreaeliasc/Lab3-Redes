@@ -42,7 +42,7 @@ class Client(slixmpp.ClientXMPP):
         if message[0] == '1':
             if self.algoritmo == '1':
                 if message[2] == self.jid:
-                    print("Este mensaje es para mi >> " +  message[6])
+                    print("Incoming message >> " +  message[6])
                 else:
                     shortest_neighbor_node = self.dvr.shortest_path(message[2])
                     if shortest_neighbor_node:
